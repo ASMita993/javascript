@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse Computation Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traverse Chart Computation</h1>
+        <form id="traverseForm">
+            <!-- Input for initial coordinates -->
+            <div class="point">
+                <label for="easting1">Initial Easting (E1):</label>
+                <input type="number" id="easting1" name="easting1" step="0.01" required>
+
+                <label for="northing1">Initial Northing (N1):</label>
+                <input type="number" id="northing1" name="northing1" step="0.01" required>
+            </div>
+            <div class="point">
+                <label for="easting2">Second Easting (E2):</label>
+                <input type="number" id="easting2" name="easting2" step="0.01" required>
+
+                <label for="northing2">Second Northing (N2):</label>
+                <input type="number" id="northing2" name="northing2" step="0.01" required>
+            </div>
+
+            <!-- Input for observed angles, bearings, and distances -->
+            <div id="pointInputs">
+                <div class="point">
+                    <label for="angle1">Observed Angle (°):</label>
+                    <input type="number" id="angle1" name="angle[]" step="0.01" required>
+
+                    <label for="bearing1">Bearing (°):</label>
+                    <input type="number" id="bearing1" name="bearing[]" step="0.01" required>
+
+                    <label for="distance1">Length (m):</label>
+                    <input type="number" id="distance1" name="distance[]" step="0.01" required>
+                </div>
+            </div>
+
+            <button type="button" id="addPoint">Add Point</button>
+            <button type="button" id="compute">Compute Traverse</button>
+        </form>
+
+        <div id="results">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
